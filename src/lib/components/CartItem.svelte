@@ -6,11 +6,13 @@
 	<div class="info">
 		<h3>{product.title}</h3>
 
-		<p>Price: ${product.price}</p>
+		<p class="meta">
+			Price: ${product.price} • Qty: {product.quantity}
+		</p>
 
-		<p>Quantity: {product.quantity}</p>
-
-		<p>Total: ${(product.price * product.quantity).toFixed(2)}</p>
+		<p class="total">
+			${(product.price * product.quantity).toFixed(2)}
+		</p>
 	</div>
 
 	<button onclick={() => removeItem(product.id)}> Remove </button>
@@ -20,14 +22,42 @@
 	.item {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		padding: 1rem;
-		border: 1px solid #ddd;
-		border-radius: 6px;
+		align-items: flex-start;
+		gap: 0.75rem;
+		padding: 1.25rem;
+		background: white;
+		border-radius: 12px;
+		border: 1px solid #eaeaea;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 	}
 
 	.info {
-		display: grid;
-		gap: 0.25rem;
+		flex: 1;
+		min-width: 0;
+	}
+
+	button {
+		flex-shrink: 0;
+		align-self: flex-end;
+		border: none;
+		background: #cf393b;
+		color: white;
+		padding: 0.5rem 0.75rem;
+		border-radius: 6px;
+		cursor: pointer;
+
+		white-space: nowrap;
+	}
+
+	button:hover {
+		background: #e63b3d;
+	}
+
+	.meta {
+		font-size: 0.9rem;
+		color: #666;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 </style>

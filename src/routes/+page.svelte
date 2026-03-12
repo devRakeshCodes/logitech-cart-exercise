@@ -8,6 +8,14 @@
 	let cart = $state(initialCart);
 </script>
 
-<h1>Shopping Cart</h1>
+<h1 class="title">Shopping Cart</h1>
 
 <Cart {cart} />
+
+<style>
+	.title {
+		text-align: center;
+		margin-top: 2rem;
+		font-size: 2rem;
+	}
+</style>

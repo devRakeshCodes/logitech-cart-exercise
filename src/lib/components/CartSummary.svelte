@@ -9,16 +9,35 @@
 <div class="summary">
 	<h2>Cart Summary</h2>
 
-	<p>Total Products: {totalItems}</p>
+	<div class="summary-row">
+		<span>Products</span>
+		<span>{totalItems}</span>
+	</div>
 
-	<p>Total Price: ${totalPrice.toFixed(2)}</p>
+	<div class="summary-row total">
+		<span>Total</span>
+		<span>${totalPrice.toFixed(2)}</span>
+	</div>
 </div>
 
 <style>
 	.summary {
-		padding: 1rem;
-		border-top: 2px solid #ccc;
+		padding: 1.25rem;
+		border-radius: 10px;
+		background: #fafafa;
+		border: 1px solid #eee;
 		display: grid;
-		gap: 0.5rem;
+		gap: 0.75rem;
+	}
+
+	.summary-row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.total {
+		font-weight: 600;
+		margin-top: 0.25rem;
+		font-size: 0.95rem;
 	}
 </style>
