@@ -1,42 +1,32 @@
-# sv
+# Logitech Shopping Cart Exercise
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A small shopping cart application built with SvelteKit.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Display cart items
+- Remove items from cart
+- Automatic cart total calculation
+- Reset cart to initial state
+- Responsive layout
+- Empty cart state handling
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Tech Stack
 
-To recreate this project with the same configuration:
+- Svelte 5 (Runes)
+- SvelteKit
+- Vanilla CSS
 
-```sh
-# recreate this project
-npx sv@0.12.6 create --template minimal --no-types --add prettier eslint --install npm logitech-cart-exercise
-```
+## Running Locally
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+npm install
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Open the app in your browser:
 
-To create a production version of your app:
+http://localhost:5173
 
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+---
